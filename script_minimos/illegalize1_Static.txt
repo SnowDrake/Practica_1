@@ -1,0 +1,18 @@
+********************
+Read: 01 N Party1.
+01 N: party Party1
+* New: Party1
+Read: 02 S 10.
+********************
+Read: 03 N Party2.
+03 N: party Party2
+* New: Party2
+Read: 04 S 10.
+********************
+Read: 05 N Party3.
+05 N: party Party3
+* New: Party3
+Read: 06 S 10.
+Read: 07 I Party1.
++_Error:_Illegalize_not_possible
+Read: 08 S 10.
