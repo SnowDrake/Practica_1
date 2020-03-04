@@ -1,7 +1,6 @@
 file(REMOVE_RECURSE
   "../bin/test_lists"
   "../bin/test_lists.pdb"
-  "CMakeFiles/test_lists.dir/dynamic_list.c.o"
   "CMakeFiles/test_lists.dir/test.c.o"
 )
 

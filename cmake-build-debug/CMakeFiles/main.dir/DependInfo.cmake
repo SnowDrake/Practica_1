@@ -4,15 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/P1/P1/dynamic_list.c" "/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/P1/P1/cmake-build-debug/CMakeFiles/main.dir/dynamic_list.c.o"
   "/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/P1/P1/main.c" "/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/P1/P1/cmake-build-debug/CMakeFiles/main.dir/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_C
-  "DYNAMIC_LIST"
-  "INPUT_FILE=\"new.txt\""
+  "INPUT_FILE=\"vote.txt\""
+  "TEST_LIST"
   )
 
 # The include file search paths:

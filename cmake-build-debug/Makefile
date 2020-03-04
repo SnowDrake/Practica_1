@@ -139,36 +139,6 @@ test_lists/fast:
 	$(MAKE) -f CMakeFiles/test_lists.dir/build.make CMakeFiles/test_lists.dir/build
 .PHONY : test_lists/fast
 
-dynamic_list.o: dynamic_list.c.o
-
-.PHONY : dynamic_list.o
-
-# target to build an object file
-dynamic_list.c.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/dynamic_list.c.o
-	$(MAKE) -f CMakeFiles/test_lists.dir/build.make CMakeFiles/test_lists.dir/dynamic_list.c.o
-.PHONY : dynamic_list.c.o
-
-dynamic_list.i: dynamic_list.c.i
-
-.PHONY : dynamic_list.i
-
-# target to preprocess a source file
-dynamic_list.c.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/dynamic_list.c.i
-	$(MAKE) -f CMakeFiles/test_lists.dir/build.make CMakeFiles/test_lists.dir/dynamic_list.c.i
-.PHONY : dynamic_list.c.i
-
-dynamic_list.s: dynamic_list.c.s
-
-.PHONY : dynamic_list.s
-
-# target to generate assembly for a file
-dynamic_list.c.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/dynamic_list.c.s
-	$(MAKE) -f CMakeFiles/test_lists.dir/build.make CMakeFiles/test_lists.dir/dynamic_list.c.s
-.PHONY : dynamic_list.c.s
-
 main.o: main.c.o
 
 .PHONY : main.o
@@ -233,9 +203,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... main"
 	@echo "... test_lists"
-	@echo "... dynamic_list.o"
-	@echo "... dynamic_list.i"
-	@echo "... dynamic_list.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -1,7 +1,6 @@
 file(REMOVE_RECURSE
   "../bin/main"
   "../bin/main.pdb"
-  "CMakeFiles/main.dir/dynamic_list.c.o"
   "CMakeFiles/main.dir/main.c.o"
 )
 
