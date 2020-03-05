@@ -179,8 +179,8 @@ void processCommand(char command_number[CODE_LENGTH+1], char command, char param
             if(p==LNULL)
                 printf("+ Error: Illegalize not possible\n");
             else {
-                *votosNulos = *votosNulos + getItem(p, *L).numVotes;
                 *votosTotales = *votosTotales - getItem(p, *L).numVotes;
+                *votosNulos = *votosNulos + getItem(p, *L).numVotes;
                 deleteAtPosition(p, L);
                 printf("* Illegalize: party %s\n", param);
             }
