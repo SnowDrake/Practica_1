@@ -39,10 +39,7 @@ int countElements(tList L) {
         }
     return elements;
 }
-
-void hola(){
-
-}
+void m(){}
 void printElementsReverse(tList L) {
     tPosL pos;
     tItemL item;

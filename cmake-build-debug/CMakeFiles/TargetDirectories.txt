@@ -1,4 +1,4 @@
-/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/P1/P1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/P1/P1/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/P1/P1/cmake-build-debug/CMakeFiles/main.dir
-/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/P1/P1/cmake-build-debug/CMakeFiles/test_lists.dir
+/root/CLionProjects/Practica_1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/root/CLionProjects/Practica_1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/root/CLionProjects/Practica_1/cmake-build-debug/CMakeFiles/main.dir
+/root/CLionProjects/Practica_1/cmake-build-debug/CMakeFiles/test_lists.dir
