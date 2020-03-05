@@ -39,7 +39,6 @@ int countElements(tList L) {
         }
     return elements;
 }
-void m(){}
 void printElementsReverse(tList L) {
     tPosL pos;
     tItemL item;
@@ -182,6 +181,16 @@ void processCommand(char command_number[CODE_LENGTH+1], char command, char param
                 deleteAtPosition(findItem(param, *L), L);
                 printf("* Illegalize: %s\n", param);
             }
+            /*tPosL p;
+            p=findItem(param,*L);
+            if(p==LNULL)
+                printf("+ Error: Illegalize not possible\n");
+            else{
+                *NVOTES=*NVOTES+getItem(p,*L).numVotes;
+                *totalVotes=*totalVotes-getItem(p,*L).numVotes;
+                deleteAtPosition(p,L);
+                printf("* Illegalize: party %s\n",param);
+            }*/
             break;
         }
         // Para otros casos
