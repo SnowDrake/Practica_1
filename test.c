@@ -71,6 +71,10 @@ int main() {
     print_list(list);
 
 
+    strcpy(item1.partyName, "party1");
+    insertItem(item1, LNULL, &list);
+    print_list(list);
+
     /* insert */
     strcpy(item1.partyName, "party3");
     insertItem(item1, LNULL, &list);
@@ -98,6 +102,7 @@ int main() {
 
     printf("\n");
     /* find */
+    /*
     pos = findItem("party33", list);
     if (pos == LNULL) {
         printf("party33 Not found\n");
@@ -109,6 +114,7 @@ int main() {
 
 
     /* update */
+    /*
     updateVotes(1, pos, &list);
     item2 = getItem(pos, list);
     printf("%s\n", item2.partyName);
@@ -116,6 +122,7 @@ int main() {
 
 
     /* remove */
+    /*
     deleteAtPosition(next(first(list),list), &list);
     print_list(list);
 
@@ -133,4 +140,5 @@ int main() {
 
     insertItem(item1, LNULL, &list);
     print_list(list);
+     */
 }

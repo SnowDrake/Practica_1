@@ -4,13 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/root/CLionProjects/Practica_1/test.c" "/root/CLionProjects/Practica_1/cmake-build-debug/CMakeFiles/test_lists.dir/test.c.o"
+  "/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/P1/Git_P1/test.c" "/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/P1/Git_P1/cmake-build-debug/CMakeFiles/test_lists.dir/test.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_C
-  "INPUT_FILE=\"vote.txt\""
+  "INPUT_FILE=\"new.txt\""
   "TEST_LIST"
   )
 

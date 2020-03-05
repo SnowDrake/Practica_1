@@ -106,7 +106,7 @@ void deleteList(tList* L) {
     }
 }
 tPosL findItem(const tPartyName name, tList L) {
-    tPosL p;
+    tPosL p = NULL;
     for (p = L; (p != LNULL) && (p->data.partyName != name); p = p->next);
     return p; // Devuelve LNULL si no está en la lista, o una posición válida de la lista
 }

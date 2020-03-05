@@ -14,7 +14,7 @@
 #include "list/list.h"
 
 #define LNULL -1
-#define MAX 25
+#define MAX 5
 
 
 /* Write your code here... */

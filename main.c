@@ -76,7 +76,7 @@ float devolverParam(char param[NAME_LENGTH_LIMIT+1]) {
     return x;
 }
 
-void print_list_STATS(tList list, tPartyName param, int votosTotales, int votosNulos) {
+void print_list_STATS(tList list, char param[NAME_LENGTH_LIMIT+1], int votosTotales, int votosNulos) {
     tPosL pos;
     tItemL item;
 
@@ -100,7 +100,7 @@ void print_list_STATS(tList list, tPartyName param, int votosTotales, int votosN
     printf("Participation: %d votes from %s voters (%.2f%%)\n", votosTotales + votosNulos, param, (((float)votosTotales+(float)votosNulos)/devolverParam(param)*100));
 }
 
-void crearPartido(tPartyName name, tList *lista) {
+void crearPartido(char name[NAME_LENGTH_LIMIT+1], tList *lista) {
     struct tItemL newItem;
     newItem.numVotes = 0;
     strcpy(newItem.partyName, name);
@@ -112,7 +112,7 @@ void crearPartido(tPartyName name, tList *lista) {
         check = insertItem(newItem, LNULL, lista);
         p = findItem(name, *lista);
         if (check == true) {
-            printf("* New: party %s\n", getItem(p, *lista).partyName);
+            printf("* New: party %s\n", newItem.partyName);
         }
         else {
             printf("+ Error: New not possible\n");
@@ -124,15 +124,15 @@ void crearPartido(tPartyName name, tList *lista) {
 
 }
 
-void votarPartido(tPartyName name, tList *lista, int *votosTotales, int *votosNulos) {
+void votarPartido(char name[NAME_LENGTH_LIMIT+1], tList *lista, int *votosTotales, int *votosNulos) {
     tPosL p;
+    p = findItem(name, *lista);
     int N = 0; // Variable que incrementa los votos del partido
-    if (findItem(name, *lista) == LNULL) {
+    if (p == LNULL) {
         printf("+ Error: Vote not possible. %s not found. NULLVOTE\n", name);
         *votosNulos = *votosNulos + 1;
     }
     else {
-        p = findItem(name, *lista);
         N = getItem(p, *lista).numVotes;
         N++;
         updateVotes(N, p, lista);
@@ -156,9 +156,10 @@ void processCommand(char command_number[CODE_LENGTH+1], char command, char param
             // Votar al partido
             printf("********************\n");
             printf("%s %c: party %s\n", command_number, command, param);
+            print_list(*L);
             votarPartido(param, L, votosTotales, votosNulos);
             //printf("Nulos = %d\n", votosNulos);
-            //print_list(*L);
+            print_list(*L);
             break;
         }
         case 'S': {
@@ -175,8 +176,8 @@ void processCommand(char command_number[CODE_LENGTH+1], char command, char param
             printf("********************\n");
             printf("%s %c: party %s\n", command_number, command, param);
             tPosL p;
-            p=findItem(param,*L);
-            if(p==LNULL)
+            p = findItem(param,*L);
+            if(p == LNULL)
                 printf("+ Error: Illegalize not possible\n");
             else {
                 *votosNulos = *votosNulos + getItem(p, *L).numVotes;
@@ -212,6 +213,7 @@ void readTasks(char *filename, tList *L) {
             sprintf(format, "%%%is %%c %%%is", CODE_LENGTH, NAME_LENGTH_LIMIT);
             fscanf(df,format, command_number, &command, param);
             processCommand(command_number, command, param, L, votosTotales, votosNulos);
+            //print_list(L);
         }
         fclose(df);
     } else {
@@ -224,6 +226,7 @@ int main(int nargs, char **args) {
 
     tList *L;
     createEmptyList(L);
+
 
     char *file_name = "new.txt";
 
