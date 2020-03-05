@@ -174,23 +174,16 @@ void processCommand(char command_number[CODE_LENGTH+1], char command, char param
             // Ilegalizar partido de la lista
             printf("********************\n");
             printf("%s %c: party %s\n", command_number, command, param);
-            if (findItem(param, *L) == LNULL) {
-                printf("+ Error: Illegalize not_possible\n");
-            }
-            else {
-                deleteAtPosition(findItem(param, *L), L);
-                printf("* Illegalize: %s\n", param);
-            }
-            /*tPosL p;
+            tPosL p;
             p=findItem(param,*L);
             if(p==LNULL)
                 printf("+ Error: Illegalize not possible\n");
-            else{
-                *NVOTES=*NVOTES+getItem(p,*L).numVotes;
-                *totalVotes=*totalVotes-getItem(p,*L).numVotes;
-                deleteAtPosition(p,L);
-                printf("* Illegalize: party %s\n",param);
-            }*/
+            else {
+                *votosNulos = *votosNulos + getItem(p, *L).numVotes;
+                *votosTotales = *votosTotales - getItem(p, *L).numVotes;
+                deleteAtPosition(p, L);
+                printf("* Illegalize: party %s\n", param);
+            }
             break;
         }
         // Para otros casos
