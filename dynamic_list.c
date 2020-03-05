@@ -30,7 +30,7 @@ bool insertItem(tItemL d, tPosL p, tList* L) {
             *L = q; // el puntero L apunta a donde lo hace q
         }
         else if (p == LNULL) { // FINAL, recorremos toda la lista
-            for (r = *L; r->next != LNULL; r = r->next);
+            for (r = *L; r->next != LNULL; r = next(r, *L));
             r -> next = q;
         } // fin del FINAL
         else if (p == *L) { // insertar en CABEZA

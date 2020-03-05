@@ -11,7 +11,36 @@
 #include "list/list.h"
 #endif
 
+int countElements(tList L) {
+    tPosL pos;
+    int elements = 0;
+    if (isEmptyList(L) == true) {
+        elements = 0;
+    }
+    else {
+        pos = first(L);
+        while (pos != LNULL) {
+            elements++;
+            pos = next(pos, L);
+        }
+    }
+    return elements;
+}
 
+
+void printElementsReverse(tList L) {
+    tPosL pos;
+    tItemL item;
+
+    if (!isEmptyList(L)) {
+        pos = last(L);
+        while (pos != LNULL) {
+            item = getItem(pos, L);
+            printf("%s numvotes %d\n", item.partyName, item.numVotes);
+            pos = previous(pos, L);
+        }
+    }
+}
 void print_list(tList list) {
     tPosL pos;
     tItemL item;
@@ -63,7 +92,11 @@ int main() {
     insertItem(item1, last(list), &list);
     print_list(list);
 
+    printf("Elements = %d\n", countElements(list));
+    printElementsReverse(list);
 
+
+    printf("\n");
     /* find */
     pos = findItem("party33", list);
     if (pos == LNULL) {

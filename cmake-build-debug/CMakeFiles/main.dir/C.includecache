@@ -29,6 +29,8 @@ types.h
 /home/david/FIC/Primer Curso/Q2/Programación II/Practicas/P1/P1/types.h
 string.h
 -
+stdlib.h
+-
 static_list.h
 /home/david/FIC/Primer Curso/Q2/Programación II/Practicas/P1/P1/static_list.h
 dynamic_list.h

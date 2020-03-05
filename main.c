@@ -24,6 +24,35 @@
 #include "list/list.h"
 #endif
 
+int countElements(tList L) {
+    tPosL pos;
+    int elements = 0;
+    if (isEmptyList(L) == true) {
+        elements = 0;
+    }
+    else {
+        pos = first(L);
+        while (pos != LNULL) {
+            elements++;
+            pos = next(pos, L);
+        }
+        }
+    return elements;
+}
+
+void printElementsReverse(tList L) {
+    tPosL pos;
+    tItemL item;
+
+    if (!isEmptyList(L)) {
+        pos = last(L);
+        while (pos != first(L)) {
+            item = getItem(pos, L);
+            printf("%s numvotes %d", item.partyName, item.numVotes);
+            pos = previous(pos, L);
+        }
+    }
+}
 
 void print_list(tList list) {
     tPosL pos;
